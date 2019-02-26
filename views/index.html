@@ -1,0 +1,123 @@
+{% extends './views/base.html' %}
+
+{% block title %}
+<title>{{ title }}</title>
+<link rel="shortcut icon" href="favicon.ico">
+{% endblock %}
+
+{% block header %}
+<div class="jumbotron" style="background:url(img/backimg/pow-star.png);">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="hidden">电气学院学生会</h1>
+            <h2 class="hidden">网络部</h2>
+            <img class="img-responsive" src="img/top.png" alt="电气学院学生会网络部欢迎您">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7 col-md-offset-1">
+            <p class="lead" style="text-indent: 2em;padding:0px 15px 0 15px">对计算机或者PS感兴趣吗？想成为一名视频达人或者网络大咖吗？想自己做出一个炫酷的网页或视频并体验那种成就感吗？没错，那就来网络部吧！作为全院最务实的部门(没有之一)，在这里你可以和各位大神沟通交流，可以和萌新们一起学习代码，可以比别人多掌握一门技能甚至成为这个领域的大师…我们能正经，也能逗比，能一起学，也能一起嗨。心动不如行动，还在犹豫什么，投入网络部的怀抱吧！</p>
+            <p class="pull-right"><a href="#" class="btn btn-primary btn-lg" role="button">了解更多</a></p>
+        </div>
+        <div class="col-md-3 center-block"> <img alt="" class="img-responsive" src="img/pic.png"> </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 column">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">往届业绩</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 column">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">部内新闻</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="news/17-9-28.html"><span>[2017/9/28]</span>网络部17/9/28部门例会详情</a></li>
+                        <li><a href="news/17-9-27.html"><span>[2017/9/27]</span>关于网络部2017秋招工作的报告</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 column">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">部内资源</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li><a href="#">项目</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" style="background:url(img/backimg/regal.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">投诉建议</h3>
+                <form role="form" class="form-group col-md-4 col-md-offset-4">
+                    <div>
+                        <label for="InputName">您的姓名:</label>
+                        <input class="form-control" id="Name" type="text" placeholder="姓名" />
+                    </div>
+                    <div>
+                        <label for="InputNumber">您的学号:</label>
+                        <input class="form-control" id="Number" type="text" placeholder="学号" />
+                    </div>
+                    <div>
+                        <label for="InputQQNumber">您的QQ:</label>
+                        <input class="form-control" id="QQNumber" type="text" placeholder="QQ" />
+                    </div>
+                    <div>
+                        <label for="InputPhoneNumber">您的联系方式:</label>
+                        <input class="form-control" id="PhoneNumber" type="text" placeholder="手机" />
+                    </div>
+                    <div>
+                        <label for="InputSuggestion">您的宝贵建议:</label>
+                        <textarea class="form-control" id="Suggestion" rows="5" placeholder="您的意见"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-block btn-danger">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends './views/base.html' %}
+
+{% block title %}
+<title>{{ title }}</title>
+<link rel="shortcut icon" href="favicon.ico">
+{% endblock %}
+
+{% block header %}
+<div class="jumbotron" style="background:url(img/backimg/pow-star.png);">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="hidden">电气学院学生会</h1>
+            <h2 class="hidden">网络部</h2>
+            <img class="img-responsive" src="img/top.png" alt="电气学院学生会网络部欢迎您">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron" style="background:url(img/backimg/regal.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">{{ info }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
