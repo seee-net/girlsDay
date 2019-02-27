@@ -58,6 +58,7 @@ const WishData = db.defineModel('wishData', {
     allowNull: true
   },
 })
+
 module.exports = {
   girlCommit: async (gNumber, gName, gClass, gQQ, gTel, gWish, gPassword, ) => {
     let res
