@@ -2,14 +2,13 @@ const model = require('../model')
 
 const index = async (ctx, next) => {
   try {
-    let res = await model.Girl.read()
-
+    let res = await model.WishData.getUnclaimed()
     await ctx.render('index.html', {
       title: '领取愿望',
-      dreams: res
+      wishs: res
     })
   } catch {
-    await info(ctx, '出错啦', 'srefra')
+    await info(ctx, '出错啦', '找不到页面啦')
   }
 }
 

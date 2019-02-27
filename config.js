@@ -19,11 +19,11 @@ const config = {
     // 数据库软件
     dialect: 'mysql',
     // 数据库名称
-    database: 'girlDay',
+    database: 'girlsDay',
     // 用户名
     username: 'root',
     // 密码
-    password: 'WFY0626wfy',
+    password: 'root',
     // 数据库地址
     host: 'localhost',
     // 端口号

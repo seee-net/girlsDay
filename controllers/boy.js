@@ -7,14 +7,14 @@ const boysPage = async (ctx, next) => {
 }
 
 const boysIn = async (ctx, next) => {
-  const number = ctx.request.body.number || ''
-  const name = ctx.request.body.name || ''
-  const gclass = ctx.request.body.class || ''
-  const QQ = ctx.request.body.QQ || ''
-  const Tel = ctx.request.body.Tel || ''
-
+  const boynumber = ctx.request.body.boynumber || ''
+  const boyname = ctx.request.body.boyname || ''
+  const boyclass = ctx.request.body.boyclass || ''
+  const boyQQ = ctx.request.body.boyQQ || ''
+  const boyTel = ctx.request.body.boyTel || ''
   try {
-    let res = await model.Boy.commit(number, name, gclass, QQ, Tel,  )
+    await model.WishData.boyCommit(boynumber, boyname,
+      boyclass, boyQQ, boyTel)
     await info(ctx, '保存成功', '您已')
   } catch {
     await info(ctx, '保存失败', '请重新选择')
@@ -29,6 +29,6 @@ async function info(ctx, title, info) {
 }
 
 module.exports = {
-  'GET /boys':boysPage,
+  'GET /boys': boysPage,
   'POST /boys': boysIn,
 }

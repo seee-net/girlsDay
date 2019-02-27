@@ -23,8 +23,8 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <ul>
-                    {% for show in dreams %}
-                      <li><a href="/boys?id={{ show.id }}">{{ show.dream }}</a></li>
+                    {% for item in wishs %}
+                      <li><a href="/boys?id={{ item.id }}">{{ item.wish }}</a></li>
                     {% else %}
                       <li>很遗憾，列表已空</li>
                     {% endfor %}

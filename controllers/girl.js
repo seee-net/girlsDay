@@ -7,16 +7,16 @@ const girlsPage = async (ctx, next) => {
 }
 
 const girlsIn = async (ctx, next) => {
-  const number = ctx.request.body.number || ''
-  const name = ctx.request.body.name || ''
-  const gclass = ctx.request.body.class || ''
-  const QQ = ctx.request.body.QQ || ''
-  const Tel = ctx.request.body.Tel || ''
-  const dream = ctx.request.body.dream || ''
+  const girlnumber = ctx.request.body.girlnumber || ''
+  const girlname = ctx.request.body.girlname || ''
+  const girlclass = ctx.request.body.girlclass || ''
+  const girlQQ = ctx.request.body.girlQQ || ''
+  const girlTel = ctx.request.body.girlTel || ''
+  const girldream = ctx.request.body.girldream || ''
   const Password = ctx.request.body.Password || ''
-
   try {
-    let res = await model.Girl.commit(number, name, gclass, QQ, Tel, dream, Password)
+    await model.WishData.girlCommit(girlnumber, girlname, girlclass,
+      girlQQ, girlTel, girldream, Password)
     await info(ctx, '保存成功', '您已保存')
   } catch {
     await info(ctx, '保存失败', '请重新输入')
