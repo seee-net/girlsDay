@@ -17,7 +17,7 @@ const girlsIn = async (ctx, next) => {
   try {
     await model.WishData.girlCommit(girlnumber, girlname, girlclass,
       girlQQ, girlTel, girldream, Password)
-    await info(ctx, '保存成功', '您已保存')
+    await info(ctx, '保存成功', '许愿成功！')
   } catch {
     await info(ctx, '保存失败', '请重新输入')
   }

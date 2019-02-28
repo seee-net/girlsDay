@@ -80,9 +80,9 @@ module.exports = {
   getUnclaimed: async () => {
     let res
     await WishData.findAll({ // 还有find、findAll等方法
-    //  where: {
-    //    boynumber: ''
-    //  }
+      where: {
+       boynumber: null
+       }
     }).then(
       result => {
         res = result
@@ -90,14 +90,60 @@ module.exports = {
     return res
   },
 
-  boyCommit: async (bNumber, bName, bClass, bQQ, bTel, ) => {
+  boyCommit: async (bNumber, bName, bClass, bQQ, bTel, girlid) => {
     let res
-    await WishData.create({
+    await WishData.update({
       boynumber: bNumber,
       boyname: bName,
       boyclass: bClass,
       boyQQ: bQQ,
       boyTel: bTel
+    }, {
+      where: {
+        id: girlid
+      }
+    }).then(
+      result => {
+        res = result
+      })
+    return res
+  },
+
+  finishCommit: async (bnumber, password) => {
+    let res
+    await WishData.update({
+      finish: 'ok'
+    }, {
+      where: {
+        password: password,
+        boynumber: bnumber
+      }
+    }).then(
+      result => {
+        res = result
+      })
+    return res
+  },
+
+  getLuckydogs: async () => {
+    let res
+    await WishData.findAll({ // 还有find、findAll等方法
+      where: {
+       finish: 'ok'
+       }
+    }).then(
+      result => {
+        res = result
+      })
+    return res
+  },
+
+  getGirlInformation: async (id) => {
+    let res
+    await WishData.findOne({ // 还有find、findAll等方法
+      where: {
+       id : id
+       }
     }).then(
       result => {
         res = result
@@ -105,3 +151,5 @@ module.exports = {
     return res
   }
 }
+
+

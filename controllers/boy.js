@@ -7,17 +7,28 @@ const boysPage = async (ctx, next) => {
 }
 
 const boysIn = async (ctx, next) => {
-  const boynumber = ctx.request.body.boynumber || ''
-  const boyname = ctx.request.body.boyname || ''
-  const boyclass = ctx.request.body.boyclass || ''
-  const boyQQ = ctx.request.body.boyQQ || ''
-  const boyTel = ctx.request.body.boyTel || ''
+  const girlid = ctx.request.body.girlid || ''
+  const boynumber = ctx.request.body.bnumber || ''
+  const boyname = ctx.request.body.bname || ''
+  const boyclass = ctx.request.body.bclass || ''
+  const boyQQ = ctx.request.body.bQQ || ''
+  const boyTel = ctx.request.body.bTel || ''
   try {
-    await model.WishData.boyCommit(boynumber, boyname,
-      boyclass, boyQQ, boyTel)
-    await info(ctx, '保存成功', '您已')
+    let res = await model.WishData.getGirlInformation(girlid)
+    if (res.boyname === null) {
+      await model.WishData.boyCommit(boynumber, boyname,
+        boyclass, boyQQ, boyTel, girlid, )
+
+      let res = await model.WishData.getGirlInformation(girlid)
+      await ctx.render('girlInfo.html', {
+        title: '女生信息',
+        girlInformation: res
+      })
+    } else {
+      await info(ctx, '领取失败', '下手过慢，本愿望已经被领取了')
+    }
   } catch {
-    await info(ctx, '保存失败', '请重新选择')
+    await info(ctx, '领取失败', '每人只能领取一个愿望哦')
   }
 }
 

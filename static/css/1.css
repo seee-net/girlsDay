@@ -1,0 +1,97 @@
+.login-button {
+    width: 200px;
+    height: 65px;
+    border-width: 0px;
+    border-radius: 15px;
+    background: #00BFFF;
+    font-family: SimSun;
+    cursor: pointer;
+    outline: none;
+
+    color: white;
+    font-size: 45px;
+}
+
+.login-button:hover {
+    background: #5599FF;
+}
+
+.footer {
+    width: 500px;
+    height: 55px;
+    float: middle;
+    font-size: 35px;
+    font-family: SimSun;
+    position: relative;
+    top: 335px;
+    left: 260px;
+}
+
+.button {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    left: 270px;
+
+}
+
+.button button:hover+span {
+    -webkit-transform: translateY(80px);
+    opacity: 1;
+}
+
+.button span {
+    display: inline-block;
+    width: 200;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 30px;
+    background: white;
+    border-radius: 30px;
+    text-align: center;
+    color: #00BFFF;
+    position: absolute;
+    top: 2px;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -webkit-transform: translateX(-40px);
+}
+
+#girl {
+    color: pink;
+}
+
+a {
+    float: middle;
+    width: 7em;
+    text-decoration: none;
+    color: black;
+
+    padding: 0.2em 0.6em;
+    border: 0px;
+}
+
+.body {
+    background-image: url(../static/img/2.jpg);
+    background-size: cover;
+    width: 1050px;
+    height: 1870px;
+    text-align: center;
+    padding-bottom: 50px;
+    border: 5px dotted black;
+    padding: 10px;
+    font-family: cursive;
+}
+
+h1.t {
+    font-size: 100px;
+}
+
+.ul {
+    font-family: SimSun;
+    margin: 0px 0px 20px 0px;
+}
+
+#pink {
+    background: pink;
+}

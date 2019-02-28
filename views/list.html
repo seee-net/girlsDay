@@ -1,0 +1,42 @@
+{% extends './views/base.html' %}
+
+{% block title %}
+<title>许你一个不曾落空的愿望</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="./static/css/1.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico">
+{% endblock %}
+
+{% block header %}
+<div class="jumbotron" style="background:url(img/backimg/pow-star.png);">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="hidden">电气学院学生会</h1>
+            <h2 class="hidden">网络部、女生部</h2>
+            <img class="img-responsive" src="img/top.png" alt="电气学院学生会网络部欢迎您">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron" style="background:url(img/backimg/regal.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>挑选一个愿望吧</h3>
+                <ul class="list-unstyled">
+                    {% for item in wishs %}
+                    <hr>
+                    <li style="font-size: 20px;"><a href="/boys?id={{ item.id }}">{{ item.wish }}</a></li>
+                    {% else %}
+                    <li>很遗憾，列表已空</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
