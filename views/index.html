@@ -1,30 +1,44 @@
-{% extends './views/base.html' %}
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-{% block title %}
-<title>许你一个不曾落空的愿望</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="./css/1.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="favicon.ico">
-{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+     <title>女生节</title> 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-{% block header %}
-<div class="jumbotron" style="background:url(img/backimg/pow-star.png);">
+
+<body style="background-image:url(img/backimg/rg.jpg);background-repeat:no-repeat;background-size:cover;">
     <div class="container">
-        <div class="page-header">
-            <h1 class="hidden">电气学院学生会</h1>
-            <h2 class="hidden">网络部、女生部</h2>
-            <img class="img-responsive" src="img/top.png" alt="电气学院学生会网络部欢迎您">
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">导航</a> </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation" class="active"><a href="/girlsday/">主页</a></li>
+                        <li role="presentation" ><a href="/girlsday/girls">女生许愿望</a></li>
+                        <li role="presentation" ><a href="/girlsday/list">男生领愿望</a></li>
+                        <li role="presentation" ><a href="/girlsday/finish">抽奖池</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr>
     </div>
-</div>
-{% endblock %}
 
-{% block body %}
-<div align="center">
-    <a href="/list"><button>男生戳我</button></a>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 
-    <a href="/girls"><button>女生戳我</button></a>
-
-    <a href="/finish"><button>抽奖戳我</button></a>
-</div>
-{% endblock %}
+</html>

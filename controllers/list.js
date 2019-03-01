@@ -20,5 +20,5 @@ async function info(ctx, title, info) {
 }
 
 module.exports = {
-  'GET /list': list,
+  'GET /girlsday/list': list,
 }

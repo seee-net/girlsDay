@@ -11,36 +11,44 @@
     {% block title %} <title>no title</title> {% endblock %}
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    body{
-        background-image: url(img/backimg/2.jpg);
-        background-size: cover;
-    }
-    </style>
 </head>
 
-<body >
+
+<body style="background:url(img/backimg/back.png);">
     <div class="container">
-        <br>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">导航</a> </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation" class="active"><a href="/girlsday/">主页</a></li>
+                        <li role="presentation"><a href="/girlsday/girls">女生许愿望</a></li>
+                        <li role="presentation"><a href="/girlsday/list">男生领愿望</a></li>
+                        <li role="presentation"><a href="/girlsday/finish">抽奖池</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr>
         {% block header %} <div>No header</div> {% endblock %}
         {% block body %} <div>No body</div> {% endblock %}
         {% block footer %}
         <footer>
             <div class="row">
-                <div class="col-md-12 text-center text-primary" style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">感谢下列网站提供素材和部分技术支持</div>
+                <div class="col-md-12 text-center text-primary" style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">感谢下面网站提供素材和部分技术支持</div>
             </div>
             <div class="row">
-                <div class="col-md-2 text-center">
-                    <a href="http://www.w3school.com.cn" target="_blank">W3school</a>
+                <div class="col-md-2 col-md-offset-2 text-center"> <a href="http://www.w3school.com.cn" target="_blank">W3school</a>
                 </div>
-                <div class="col-md-2 text-center"> 
-                    <a href="http://v3.bootcss.com/" target="_blank">Bootstrap</a> 
-                </div>
-                <div class="col-md-2 text-center"> 
-                    <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns</a> 
-                </div>
-                <div class="col-md-2 text-center"> 
-                    <a href="http://fontawesome.io" target="_blank">Font Awesome</a>
+                <div class="col-md-2 text-center"> <a href="http://v3.bootcss.com/" target="_blank">Bootstrap</a> </div>
+                <div class="col-md-2 text-center"> <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle
+                        Patterns</a> </div>
+                <div class="col-md-2 text-center"> <a href="http://fontawesome.io" target="_blank">Font Awesome</a>
                 </div>
             </div>
             <div class="copyright">

@@ -23,7 +23,7 @@ const config = {
     // 用户名
     username: 'root',
     // 密码
-    password: 'root',
+    password: '@JY0319#',
     // 数据库地址
     host: 'localhost',
     // 端口号

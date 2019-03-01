@@ -23,12 +23,12 @@
 <div class="jumbotron" style="background:url(img/backimg/regal.png);">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-xs-12 text-center">
                 <h3>挑选一个愿望吧</h3>
                 <ul class="list-unstyled">
                     {% for item in wishs %}
                     <hr>
-                    <li style="font-size: 20px;"><a href="/boys?id={{ item.id }}">{{ item.wish }}</a></li>
+                    <li style="font-size: 20px;"><a href="/girlsday/boys?id={{ item.id }}">{{ item.wish }}</a></li>
                     {% else %}
                     <li>很遗憾，列表已空</li>
                     {% endfor %}

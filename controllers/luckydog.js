@@ -20,5 +20,5 @@ async function info(ctx, title, info) {
 }
 
 module.exports = {
-  'GET /luckydog': luckydogPage,
+  'GET /girlsday/luckydog': luckydogPage,
 }

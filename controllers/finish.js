@@ -26,6 +26,6 @@ async function info(ctx, title, info) {
 }
 
 module.exports = {
-  'GET /finish': finishPage,
-  'POST /finish': finishIn,
+  'GET /girlsday/finish': finishPage,
+  'POST /girlsday/finish': finishIn,
 }

@@ -13,14 +13,26 @@ const girlsIn = async (ctx, next) => {
   const girlQQ = ctx.request.body.girlQQ || ''
   const girlTel = ctx.request.body.girlTel || ''
   const girldream = ctx.request.body.girldream || ''
-  const Password = ctx.request.body.Password || ''
-  try {
-    await model.WishData.girlCommit(girlnumber, girlname, girlclass,
-      girlQQ, girlTel, girldream, Password)
-    await info(ctx, '保存成功', '许愿成功！')
-  } catch {
-    await info(ctx, '保存失败', '请重新输入')
+  const password = ctx.request.body.passwd || ''
+  
+  if (girlnumber === '' || 
+      girlname === '' || 
+      girlclass === '' ||
+      girlQQ === '' || 
+      girlTel.length !== 11 ||
+      girldream === '' || 
+      password.length !== 6) {
+    await info(ctx, '输入失败', `请完善信息！`)
+  } else {
+    try {
+      await model.WishData.girlCommit(girlnumber, girlname, girlclass,
+        girlQQ, girlTel, girldream, password)
+      await info(ctx, '保存成功', '许愿成功！')
+    } catch {
+      await info(ctx, '保存失败', '请重新输入')
+    }
   }
+  
 }
 
 async function info(ctx, title, info) {
@@ -31,6 +43,6 @@ async function info(ctx, title, info) {
 }
 
 module.exports = {
-  'GET /girls': girlsPage,
-  'POST /girls': girlsIn,
+  'GET /girlsday/girls': girlsPage,
+  'POST /girlsday/girls': girlsIn,
 }

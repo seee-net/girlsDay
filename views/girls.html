@@ -6,15 +6,24 @@
 {% endblock %}
 
 {% block header %}
+<div class="jumbotron" style="background:url(img/backimg/pow-star.png);">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="hidden">电气学院学生会</h1>
+            <h2 class="hidden">网络部、女生部</h2>
+            <img class="img-responsive" src="img/top.png" alt="电气学院学生会网络部欢迎您">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block body %}
 <div class="jumbotron" style="background:url(img/backimg/regal.png);">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-xs-12 text-center">
                 <h3 style="font-family: '微软雅黑',' 幼圆',' 黑体',' 等线'">请许下你的愿望</h3>
-                <form role="form" class="form-group col-md-4 col-md-offset-4" action="./girls" method="post">
+                <form role="form" class="form-group col-md-4 col-md-offset-4" action="/girlsday/girls" method="post" name="girlform">
                     <div>
                         <label for="inputGirlnumber">学 号:</label>
                         <input class="form-control" id="inputGirlnumber" name="girlnumber" type="text" placeholder="学号" />
@@ -41,13 +50,22 @@
                     </div>
                     <div>
                         <label for="inputPassword">密 码:</label>
-                        <input class="form-control" id="inputNumber" name="Passwd" type="text" placeholder="一定要记好密码哦" />
+                        <input class="form-control" id="inputNumber" name="passwd" type="text" placeholder="一定要记好密码哦" />
                     </div>
                     <br>
                     <div>
                         <button type="submit" class="btn-block btn-danger">提 交</button>
                     </div>
                 </form>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1">
+                <h4 class="text-center">活动须知：</h4>
+                <ol>
+                    <li>请记住你设置的愿望密码！</li>
+                    <li>男生领取你的愿望后，会得知你的姓，QQ，电话！</li>
+                    <li>请把你的密码给为你实现了愿望的男生，这样他就可以抽奖了。</li>
+                    <li>本次活动中，你只能设置一次愿望，请珍惜机会。</li>
+                </ol>
             </div>
         </div>
     </div>
