@@ -33,6 +33,15 @@
                     <li>很遗憾，列表已空</li>
                     {% endfor %}
                 </ul>
+                <h3>已被领取的愿望</h3>
+                <ul class="list-unstyled">
+                    {% for item in claimedWishs %}
+                    <hr>
+                    <li style="font-size: 20px;">{{ item.wish }}</li>
+                    {% else %}
+                    <li>很遗憾，列表已空</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

@@ -2,10 +2,12 @@ const model = require('../model')
 
 const list = async (ctx, next) => {
   try {
-    let res = await model.WishData.getUnclaimed()
+    let unclaimedWishs = await model.WishData.getUnclaimed()
+    let claimedWishs = await model.WishData.getClaimed()
     await ctx.render('list.html', {
       title: '领取愿望',
-      wishs: res
+      wishs: unclaimedWishs,
+      claimedWishs: claimedWishs
     })
   } catch {
     await info(ctx, '出错啦', '找不到页面啦')

@@ -81,8 +81,23 @@ module.exports = {
     let res
     await WishData.findAll({ // 还有find、findAll等方法
       where: {
-       boynumber: null
-       }
+        boynumber: null
+      }
+    }).then(
+      result => {
+        res = result
+      })
+    return res
+  },
+
+  getClaimed: async () => {
+    let res
+    await WishData.findAll({ // 还有find、findAll等方法
+      where: {
+        boynumber: {
+          [db.Op.not]: null
+        }
+      }
     }).then(
       result => {
         res = result
@@ -99,13 +114,13 @@ module.exports = {
       boyQQ: bQQ,
       boyTel: bTel
     }, {
-      where: {
-        id: girlid
-      }
-    }).then(
-      result => {
-        res = result
-      })
+        where: {
+          id: girlid
+        }
+      }).then(
+        result => {
+          res = result
+        })
     return res
   },
 
@@ -114,14 +129,14 @@ module.exports = {
     await WishData.update({
       finish: 'ok'
     }, {
-      where: {
-        password: password,
-        boynumber: bnumber
-      }
-    }).then(
-      result => {
-        res = result
-      })
+        where: {
+          password: password,
+          boynumber: bnumber
+        }
+      }).then(
+        result => {
+          res = result
+        })
     return res
   },
 
@@ -129,8 +144,8 @@ module.exports = {
     let res
     await WishData.findAll({ // 还有find、findAll等方法
       where: {
-       finish: 'ok'
-       }
+        finish: 'ok'
+      }
     }).then(
       result => {
         res = result
@@ -142,8 +157,8 @@ module.exports = {
     let res
     await WishData.findOne({ // 还有find、findAll等方法
       where: {
-       id : id
-       }
+        id: id
+      }
     }).then(
       result => {
         res = result

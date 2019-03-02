@@ -9,12 +9,17 @@ const finishPage = async (ctx, next) => {
 const finishIn = async (ctx, next) => {
   const boynumber = ctx.request.body.bnumber || ''
   const password = ctx.request.body.password || ''
- 
-  try {
-    await model.WishData.finishCommit( boynumber, password)
-    await info(ctx, '匹配成功', '可以去抽奖了')
-  } catch {
-    await info(ctx, '匹配失败', '请再次检查信息')
+
+  if (boynumber === '' ||
+    password === '') {
+    await info(ctx, '输入失败', `请完善信息！`)
+  } else {
+    let res = await model.WishData.finishCommit(boynumber, password)
+    if (!!res[0]) {
+      await info(ctx, '匹配成功', '可以去抽奖了')
+    } else {
+      await info(ctx, '匹配失败', '请再次检查信息')
+    }
   }
 }
 
